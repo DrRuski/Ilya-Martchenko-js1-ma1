@@ -84,20 +84,24 @@ randomList(cats);
 
 // Question 8
 
+const catContainer = document.querySelector(".cat-container");
+
 function createCats(cats){
 
     for (let i = 0; i < cats.length; i++){
         
         const listItem = cats[i];
-        const name = listItem.name;
-        
-        
+        let petAge = listItem.age
 
-        console.log(listItem)
-
-        
-
+    if(isNaN(petAge)){
+        listItem.age = "Age Unknown"
     }
 
-}
+    catContainer.innerHTML = catContainer.innerHTML + `
+    <div><h5>${listItem.name}</h5>
+    <p>${listItem.age}</p></div>`;
 
+    console.log(listItem)
+    }
+}
+createCats(cats);
