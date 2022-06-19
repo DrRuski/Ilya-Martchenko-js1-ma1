@@ -7,7 +7,7 @@ const cat = {
     }
 };
 cat.complain();
-    
+ 
 
 
 //Question 2
@@ -26,20 +26,32 @@ heading.style.fontSize = "2em";
 
 // Question 4
 
-
+heading.className = "subheading";
 
 
 
 // Question 5
 
-const paragraph = document.querySelector("p");
+const paragraph = document.querySelectorAll("p");
 
-paragraph.style.color = "red";
+for (let i = 0; i < paragraph.length; i++){
+    
+    paragraph[i].style.color = "red";
+
+}
 
 
 
+// Question 6
 
-// Question 8
+const resultsContainer = document.querySelector(".results");
+
+resultsContainer.innerHTML = "<p>New Paragraph</p>";
+resultsContainer.style.backgroundColor = "yellow";
+
+
+
+// Question 7
 
 const cats = [
     {
@@ -54,4 +66,38 @@ const cats = [
         age: 21
     }
 ];
+
+function randomList(list){
+
+    for (let i = 0; i < list.length; i++){
+
+        const listItem = list[i].name;
+
+        console.log(listItem)
+
+    }
+
+}
+randomList(cats);
+
+
+
+// Question 8
+
+function createCats(cats){
+
+    for (let i = 0; i < cats.length; i++){
+        
+        const listItem = cats[i];
+        const name = listItem.name;
+        
+        
+
+        console.log(listItem)
+
+        
+
+    }
+
+}
 
